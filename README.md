@@ -7,7 +7,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/siamsarker/siamsarker.github.io)
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/siamsarker/siamsarker.github.io/commits/master)
 [![Website shields.io](https://img.shields.io/badge/website-up-yellow)](http://siamsarker.github.io/)
-[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/siamsarker/)
+[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/siam-sarker/)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 ### Website Preview
