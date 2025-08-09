@@ -154,7 +154,7 @@
   </nav>
 
   <!-- Nav class 2 -->
-  <nav class="hide-on-large only trigger z-depth-1">
+  <nav class="hide-on-large-only trigger z-depth-1">
     <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
       class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     <div class="name-title">
@@ -163,7 +163,7 @@
   </nav>
 
   <!-- Nav class 3 -->
-  <nav class="hide-on-large only">
+  <nav class="hide-on-large-only">
     <ul id="slide-out" class="side-nav">
       <li class="bold">
         <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
@@ -203,45 +203,31 @@
   <main>
     <!-- First Section: Heading lines and image -->
     <section id="intro" class="section scrollspy full-height">
-      <div class="overlay"></div>
       <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
-            <div class="caption">
-              <h2>Hi, I'm <span class="teal">Md Siam Hossain Sarker.</span></h2>
-              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#ffebc5"></span></h5>
-              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
-              <h5>Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving a complex and challenging real-world problems.</h5>
-            </div>
-            <div class="social">
-              <a href="http://linkedin.com/in/siam-sarker" target="_blank">
-                <button class="icon-btn linkedin">
-                  <i class="fa fa-linkedin"></i>
-                </button>
-              </a>
-              <a href="https://github.com/siamsarker/" target="_blank">
-                <button class="icon-btn github">
-                  <i class="fa fa-github"></i>
-                </button>
-              </a>
-
-              <!-- <a href="https://angel.co/u/Siam_bhogayata" target="_blank">
-                <button class="icon-btn angellist">
-                  <i class="fa fa-angellist"></i>
-                </button>
-              </a> -->
-
-              <!-- <a href="http://linkedin.com/in/siam-sarker" target="_blank">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-
-                  </span>
-              </a> -->
-            </div>
-            <div class='buttons'>
-              <a href="#about" class="readme">Read More</a>
-              <a href="#contact" class="contactme">Contact Me</a>
+        <div class="row">
+          <div class="col s12 m8 l8">
+            <div class="content section-padding valign">
+              <div class="caption">
+                <h2>Hi, I'm <span class="gradient-text">Md Siam Hossain Sarker.</span></h2>
+                <h5 class="intro-subtitle"><span class="typing" style="font-weight: 600; color:#fbbf24"></span></h5>
+                <h5 class="intro-description">Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving complex and challenging real-world problems.</h5>
+              </div>
+              <div class="social">
+                <a href="http://linkedin.com/in/siam-sarker" target="_blank" aria-label="LinkedIn">
+                  <button class="icon-btn linkedin">
+                    <i class="fa fa-linkedin"></i>
+                  </button>
+                </a>
+                <a href="https://github.com/siamsarker/" target="_blank" aria-label="GitHub">
+                  <button class="icon-btn github">
+                    <i class="fa fa-github"></i>
+                  </button>
+                </a>
+              </div>
+              <div class='buttons'>
+                <a href="#about" class="readme">Read More</a>
+                <a href="#contact" class="contactme">Contact Me</a>
+              </div>
             </div>
           </div>
         </div>
@@ -1140,16 +1126,25 @@
       })
     })
 
-    // Project Card Reveal Function
+    // Project Card Reveal Function - FIXED
     function toggleCardReveal(element) {
       const card = element.closest('.project-card');
       const cardReveal = card.querySelector('.card-reveal');
+      
+      if (!card || !cardReveal) return;
       
       if (cardReveal.classList.contains('active')) {
         // Close the card reveal
         cardReveal.classList.remove('active');
         card.style.zIndex = 'auto';
       } else {
+        // Close any other open card reveals first
+        const allCardReveals = document.querySelectorAll('.project-card .card-reveal.active');
+        allCardReveals.forEach(reveal => {
+          reveal.classList.remove('active');
+          reveal.closest('.project-card').style.zIndex = 'auto';
+        });
+        
         // Open the card reveal
         cardReveal.classList.add('active');
         card.style.zIndex = '1000';
