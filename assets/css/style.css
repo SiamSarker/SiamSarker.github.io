@@ -1457,3 +1457,151 @@ html {
     min-height: 350px;
   }
 }
+
+/* Modern About Section */
+.about-card-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.10);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 auto 2.5rem auto;
+  border: 1.5px solid #f3f4f6;
+}
+
+.about-row {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.about-left {
+  flex: 1.2;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: flex-start;
+}
+
+.about-name-role {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+  letter-spacing: 0.5px;
+}
+
+.about-role {
+  font-size: 1.1rem;
+  color: #6366f1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-intro {
+  font-size: 1.08rem;
+  color: #22223b;
+  line-height: 1.7;
+}
+
+.about-specialization {
+  font-size: 1.05rem;
+  color: #2563eb;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.about-degree {
+  font-size: 1.05rem;
+  color: #6b7280;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.about-right {
+  flex: 1.5;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: flex-start;
+}
+
+.about-skills-group {
+  margin-bottom: 0.2rem;
+}
+
+.about-skills-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #6366f1;
+  margin-bottom: 0.3rem;
+}
+
+.about-skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.about-skill-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  padding: 0.3rem 1.1rem;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+  letter-spacing: 0.2px;
+  transition: background 0.2s;
+}
+
+.about-skill-tag:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+}
+
+.about-final-line {
+  margin-top: 2.2rem;
+  font-size: 1.13rem;
+  color: #2563eb;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 900px) {
+  .about-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .about-left, .about-right {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+  .about-final-line {
+    margin-top: 1.2rem;
+    font-size: 1.01rem;
+  }
+}
