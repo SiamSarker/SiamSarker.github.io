@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -77,127 +77,52 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   
-  <!-- Navigation Menu-->
-  <!-- Nav class 1 -->
-  <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
-
-      <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
-          <img src="assets/img/profile/siam_passport.jpg" class="circle img-responsive profile-pic" alt="avatar">
+  <!-- Modern Top Navigation -->
+  <header class="top-navbar">
+    <nav class="navbar-container">
+      <!-- Logo/Brand -->
+      <div class="navbar-brand">
+        <a href="#intro" class="brand-link">
+          <img src="assets/img/profile/siam_passport.jpg" class="brand-avatar" alt="Siam Hossain">
+          <div class="brand-text">
+            <span class="brand-name">Siam Hossain</span>
+            <span class="brand-title">Software Engineer</span>
+          </div>
         </a>
-      </li>
+      </div>
 
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
+      <!-- Desktop Navigation -->
+      <ul class="navbar-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#resume" class="nav-link resume-link" onclick="showResume()">Resume</a></li>
+      </ul>
 
-      <li class="bold">
-        <!-- mdi-av-web small
-             mdi-av-my-library-books small-->
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
+      <!-- Mobile Menu Toggle -->
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </div>
+    </nav>
 
-      <li class="bold">
-        <!--
-        ICONS:
-        mdi-action-assessment
-        mdi-social-poll
-        mdi-av-equalizer
-        -->
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-      
-      <li class="bold">
-        <!--
-        ICONS:
-        -->
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- 
-        1. mdi-communication-contacts
-        2. mdi-content-mail
-        3. mdi-communication-email
-        -->
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        1. mdi-action-description
-        2. mdi-file-folder
-        3. mdi-file-folder-open
-        4. mdi-file-attachment
-        5. mdi-file-folder-shared
-        -->
-        <!-- <a aria-label="Open Siam's resume in a new tab" href="#resume" target="_blank"
-          onclick="window.open('https://drive.google.com/file/d/1vYi-bMyIsZPve0x_clxY8xsDtiHiOMd3/view?usp=sharing')"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a> -->
-        <a aria-label="Open Siam's resume in a new tab" href="https://siamsarker.github.io/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf" target="_blank"
-        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Nav class 2 -->
-  <nav class="hide-on-large-only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Siam Hossain</a><span class="black-text">Software Engineer</span>
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-menu-list">
+        <li><a href="#about" class="mobile-nav-link" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="#experience" class="mobile-nav-link" onclick="closeMobileMenu()">Experience</a></li>
+        <li><a href="#projects" class="mobile-nav-link" onclick="closeMobileMenu()">Projects</a></li>
+        <li><a href="#skills" class="mobile-nav-link" onclick="closeMobileMenu()">Skills</a></li>
+        <li><a href="#education" class="mobile-nav-link" onclick="closeMobileMenu()">Education</a></li>
+        <li><a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a></li>
+        <li><a href="#resume" class="mobile-nav-link resume-link" onclick="closeMobileMenu(); showResume()">Resume</a></li>
+      </ul>
     </div>
-  </nav>
-
-  <!-- Nav class 3 -->
-  <nav class="hide-on-large-only">
-    <ul id="slide-out" class="side-nav">
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Open Siam's Resume in a new tab"
-          href="https://siamsarker.github.io/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf" target="_blank"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
+  </header>
 
   <!-- Main Content-->
   <main>
@@ -205,11 +130,11 @@
     <section id="intro" class="section scrollspy full-height">
       <div class="container">
         <div class="row">
-          <div class="col s12 m8 l8">
-            <div class="content section-padding valign">
+          <div class="col s12 m10 l8">
+            <div class="content">
               <div class="caption">
                 <h2>Hi, I'm <span class="gradient-text">Md Siam Hossain Sarker.</span></h2>
-                <h5 class="intro-subtitle"><span class="typing" style="font-weight: 600; color:#fbbf24"></span></h5>
+                <h5 class="intro-subtitle">A <span class="typing" style="font-weight: 600; color:#fbbf24"></span></h5>
                 <h5 class="intro-description">Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving complex and challenging real-world problems.</h5>
               </div>
               <div class="social">
@@ -237,7 +162,7 @@
     <!-- Second Section: About -->
     <section id="about" class="section scrollspy">
       <h3 class="page-title white-text teal">About</h3>
-      <div class="container flow-text">
+      <div class="container center-align flow-text">
         <!-- <blockquote>
           <h2>
             A Software Developer with a passion for Backend Development and Artificial Intelligence.
@@ -281,7 +206,7 @@
     <!-- Third Section: Experience -->
     <section id="experience" class="section scrollspy">
       <h3 class="page-title white-text teal">Experience</h3>
-      <div class="container">
+      <div class="container center-align">
 
         <!-- Experience 1 -->
         <div class="card">
@@ -361,7 +286,7 @@
     <!-- Fourth Section: Projects -->
     <section id="projects" class="section scrollspy">
       <h3 class="page-title white-text teal">Projects</h3>
-      <div class="container">
+      <div class="container center-align">
         <div class="row">
 
           <div class="col s12 m6 l4">
@@ -391,12 +316,12 @@
                   </button>
                 </div>
                 <div class="card-reveal-content">
-                  <ul>
-                    <li><b>Tools:</b> Node.js, Express.js PostgreSQL</li>
-                    <li>Add Mining Data on different Projects under Companies.</li>
-                    <li>Build Companies and Projects Dashboard.</li>
-                    <li>Add multifunctional queries to the dashboard.</li>
-                  </ul>
+                <ul>
+                  <li><b>Tools:</b> Node.js, Express.js PostgreSQL</li>
+                  <li>Add Mining Data on different Projects under Companies.</li>
+                  <li>Build Companies and Projects Dashboard.</li>
+                  <li>Add multifunctional queries to the dashboard.</li>
+                </ul>
                 </div>
                 <div class="card-reveal-footer">
                   <a href="https://app.mininghub.com/" target="_blank" class="btn">
@@ -435,13 +360,13 @@
                   </button>
                 </div>
                 <div class="card-reveal-content">
-                  <ul>
-                    <li><b>Tools:</b> CakePHP, MySQL, jQuery, AJAX, RabbitMQ</li>
-                    <li>Built CMS to manage editable certificate templates.</li>
-                    <li>Applied MVC architecture using CakePHP framework.</li>
-                    <li>Integrated asynchronous processes using RabbitMQ.</li>
-                    <li>Enabled efficient graduation service customization for universities.</li>
-                  </ul>
+                    <ul>
+                      <li><b>Tools:</b> CakePHP, MySQL, jQuery, AJAX, RabbitMQ</li>
+                      <li>Built CMS to manage editable certificate templates.</li>
+                      <li>Applied MVC architecture using CakePHP framework.</li>
+                      <li>Integrated asynchronous processes using RabbitMQ.</li>
+                      <li>Enabled efficient graduation service customization for universities.</li>
+                    </ul>
                 </div>
                 <div class="card-reveal-footer">
                   <a href="https://www.reedevents.com.au/" target="_blank" class="btn">
@@ -480,13 +405,13 @@
                   </button>
                 </div>
                 <div class="card-reveal-content">
-                  <ul>
-                    <li><b>Tools:</b> Laravel, PHP, REST APIs, XAMPP, Postman</li>
-                    <li>Developed role-based APIs for admin, staff, and retailers.</li>
-                    <li>Integrated Autobill SDK for streamlined invoice handling.</li>
+                    <ul>
+                      <li><b>Tools:</b> Laravel, PHP, REST APIs, XAMPP, Postman</li>
+                      <li>Developed role-based APIs for admin, staff, and retailers.</li>
+                      <li>Integrated Autobill SDK for streamlined invoice handling.</li>
                     <li>Implemented secure authentication and authorization.</li>
                     <li>Built comprehensive repair and return management system.</li>
-                  </ul>
+                    </ul>
                 </div>
                 <div class="card-reveal-footer">
                   <a href="#" target="_blank" class="btn">
@@ -525,13 +450,13 @@
                   </button>
                 </div>
                 <div class="card-reveal-content">
-                  <ul>
-                    <li><b>Tools:</b> Laravel, PHP, REST APIs, MySQL</li>
-                    <li>Built secure APIs for commodity and company data handling.</li>
-                    <li>Enabled efficient management of mining project records.</li>
-                    <li>Collaborated with Bit Mascot (Pvt.) Ltd. team on delivery.</li>
-                    <li>Followed REST standards and scalable code structure.</li>
-                  </ul>
+                    <ul>
+                      <li><b>Tools:</b> Laravel, PHP, REST APIs, MySQL</li>
+                      <li>Built secure APIs for commodity and company data handling.</li>
+                      <li>Enabled efficient management of mining project records.</li>
+                      <li>Collaborated with Bit Mascot (Pvt.) Ltd. team on delivery.</li>
+                      <li>Followed REST standards and scalable code structure.</li>
+                    </ul>
                 </div>
                 <div class="card-reveal-footer">
                   <a href="https://www.miningbull.com.au/" target="_blank" class="btn">
@@ -570,13 +495,13 @@
                   </button>
                 </div>
                 <div class="card-reveal-content">
-                  <ul>
-                    <li><b>Tools:</b> Laravel, PHP, REST APIs, MySQL, SendGrid</li>
-                    <li>Developed APIs for doctor-hospital scheduling and comms.</li>
-                    <li>Handled user creation and secure authentication.</li>
-                    <li>Integrated SendGrid for automated email workflows.</li>
-                    <li>Tested endpoints thoroughly with Postman and XAMPP.</li>
-                  </ul>
+                    <ul>
+                      <li><b>Tools:</b> Laravel, PHP, REST APIs, MySQL, SendGrid</li>
+                      <li>Developed APIs for doctor-hospital scheduling and comms.</li>
+                      <li>Handled user creation and secure authentication.</li>
+                      <li>Integrated SendGrid for automated email workflows.</li>
+                      <li>Tested endpoints thoroughly with Postman and XAMPP.</li>
+                    </ul>
                 </div>
                 <div class="card-reveal-footer">
                   <a href="https://www.locumwest.com.au/" target="_blank" class="btn">
@@ -615,13 +540,13 @@
                   </button>
                 </div>
                 <div class="card-reveal-content">
-                  <ul>
-                    <li><b>Tools:</b> Laravel, PHP, REST APIs, XAMPP, Postman</li>
-                    <li>Built scalable and secure APIs to support tech access.</li>
-                    <li>Improved digital engagement in rural and remote regions.</li>
-                    <li>Tested endpoints using Postman for reliability.</li>
-                    <li>Followed clean architecture and RESTful practices.</li>
-                  </ul>
+                    <ul>
+                      <li><b>Tools:</b> Laravel, PHP, REST APIs, XAMPP, Postman</li>
+                      <li>Built scalable and secure APIs to support tech access.</li>
+                      <li>Improved digital engagement in rural and remote regions.</li>
+                      <li>Tested endpoints using Postman for reliability.</li>
+                      <li>Followed clean architecture and RESTful practices.</li>
+                    </ul>
                 </div>
                 <div class="card-reveal-footer">
                   <a href="https://regionaltechhub.org.au/" target="_blank" class="btn">
@@ -660,13 +585,13 @@
                   </button>
                 </div>
                 <div class="card-reveal-content">
-                  <ul>
-                    <li><b>Tools:</b> React.js, JavaScript, HTML, CSS, REST APIs</li>
-                    <li>Implemented decentralized storage for vehicle data.</li>
-                    <li>Created a responsive UI with React.js.</li>
-                    <li>Integrated RESTful APIs for secure data transactions.</li>
-                    <li>Focused on blockchain principles for transparency and immutability.</li>
-                  </ul>
+                    <ul>
+                      <li><b>Tools:</b> React.js, JavaScript, HTML, CSS, REST APIs</li>
+                      <li>Implemented decentralized storage for vehicle data.</li>
+                      <li>Created a responsive UI with React.js.</li>
+                      <li>Integrated RESTful APIs for secure data transactions.</li>
+                      <li>Focused on blockchain principles for transparency and immutability.</li>
+                    </ul>
                 </div>
                 <div class="card-reveal-footer">
                   <a href="https://app.mininghub.com/" target="_blank" class="btn">
@@ -711,12 +636,12 @@
                   </button>
                 </div>
                 <div class="card-reveal-content">
-                  <ul>
-                    <li><b>Tools:</b> PHP, NestJS, React Native, MySQL, TypeScript</li>
-                    <li>Implemented bidding system for fair pricing.</li>
-                    <li>Focused on eliminating middlemen to boost farmer profits.</li>
-                    <li>Project received team recognition and award.</li>
-                  </ul>
+                    <ul>
+                      <li><b>Tools:</b> PHP, NestJS, React Native, MySQL, TypeScript</li>
+                      <li>Implemented bidding system for fair pricing.</li>
+                      <li>Focused on eliminating middlemen to boost farmer profits.</li>
+                      <li>Project received team recognition and award.</li>
+                    </ul>
                 </div>
                 <div class="card-reveal-footer">
                   <a href="https://github.com/SiamSarker/AgroTech-back" target="_blank" class="btn">
@@ -766,13 +691,13 @@
                   </button>
                 </div>
                 <div class="card-reveal-content">
-                  <ul>
-                    <li><b>Tools:</b> Java, JavaFX, Socket Programming</li>
-                    <li>Created GUI with JavaFX for client-server interactions.</li>
-                    <li>Managed multiple client connections using sockets.</li>
-                    <li>Runnable in IntelliJ IDEA with JavaFX setup.</li>
-                    <li>Handled server-side socket communication efficiently.</li>
-                  </ul>
+                    <ul>
+                      <li><b>Tools:</b> Java, JavaFX, Socket Programming</li>
+                      <li>Created GUI with JavaFX for client-server interactions.</li>
+                      <li>Managed multiple client connections using sockets.</li>
+                      <li>Runnable in IntelliJ IDEA with JavaFX setup.</li>
+                      <li>Handled server-side socket communication efficiently.</li>
+                    </ul>
                 </div>
                 <div class="card-reveal-footer">
                   <a href="https://www.youtube.com/watch?v=LsZdV9ICpFI" target="_blank" class="btn">
@@ -870,7 +795,7 @@
     <!-- Fifth Section: Skills -->
     <section id="skills" class="section scrollspy">
       <h3 class="page-title white-text teal">Skills</h3>
-      <div class="container">
+      <div class="container center-align">
         <!-- Languages and Databases -->
         <div class="card">
           <div class="card-content">
@@ -1026,7 +951,7 @@
     <!-- Seventh Section: Education -->
     <section id="education" class="section scrollspy">
       <h3 class="page-title white-text teal">Education</h3>
-      <div class="container">
+      <div class="container center-align">
         <div class="row">
           <!-- Education -->
           <div class="col s12 m6 l6">
@@ -1064,35 +989,65 @@
       </div>
     </section>
 
+    <!-- Resume Section -->
+    <section id="resume" class="section scrollspy" style="display: none;">
+      <h3 class="page-title white-text teal">Resume</h3>
+      <div class="container center-align">
+        <div class="resume-container">
+          <div class="resume-actions">
+            <a href="https://siamsarker.github.io/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf" target="_blank" class="btn resume-download-btn">
+              <i class="fa fa-download"></i> Download PDF
+            </a>
+            <button onclick="closeResume()" class="btn resume-close-btn">
+              <i class="fa fa-times"></i> Close
+            </button>
+          </div>
+          <div class="resume-viewer">
+            <iframe src="https://siamsarker.github.io/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf" 
+                    width="100%" height="800px" frameborder="0">
+              <p>Your browser does not support PDFs. 
+                 <a href="https://siamsarker.github.io/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf" target="_blank">Download the PDF</a>.
+              </p>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Eight Section: Contact -->
     <section id="contact" class="section scrollspy full-height">
       <h3 class="page-title white-text teal">Contact</h3>
-      <div class="container">
-        <p>
-          <a aria-label="Call Siam" data-position="top" data-tooltip="Call Siam"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i><a
-              aria-label="Call Siam">+8801826557650</a></a>
-        </p>
-        <p>
-          <a aria-label="Email Siam" href="mailto:m.siamhossainsarker@gmail.com" target="_blank" data-position="top"
-            data-tooltip="Email Siam" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-envelope"></i><a aria-label="Email Siam" href="mailto:m.siamhossainsarker@gmail.com"
-              class="hoverline">m.siamhossainsarker@gmail.com</a></a>
-        </p>
-        <p>
-          <a aria-label="View Siam on GitHub" href="http://github.com/siamsarker" target="_blank"
-            data-position="top" data-tooltip="View Siam on GitHub"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i><a
-              aria-label="Siam on Github" href="http://github.com/siamsarker" class="hoverline"
-              target="_blank">github.com/siamsarker</a></a>
-        </p>
-        <p>
-          <a aria-label="View Siam on LinkedIn" href="http://linkedin.com/in/siam-sarker" target="_blank"
-            data-position="top" data-tooltip="View Siam on LinkedIn"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-linkedin"></i><a aria-label="Siam on LinkedIn" href="http://linkedin.com/in/siam-sarker"
-              class="hoverline" target="_blank">linkedin.com/in/siam-sarker</a></a>
-        </p>
+      <div class="container center-align">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa fa-phone"></i>
+            </div>
+            <h5>Phone</h5>
+            <p>+8801826557650</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa fa-envelope"></i>
+            </div>
+            <h5>Email</h5>
+            <p><a href="mailto:m.siamhossainsarker@gmail.com" class="hoverline">m.siamhossainsarker@gmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa fa-github"></i>
+            </div>
+            <h5>GitHub</h5>
+            <p><a href="http://github.com/siamsarker" target="_blank" class="hoverline">github.com/siamsarker</a></p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa fa-linkedin"></i>
+            </div>
+            <h5>LinkedIn</h5>
+            <p><a href="http://linkedin.com/in/siam-sarker" target="_blank" class="hoverline">linkedin.com/in/siam-sarker</a></p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -1118,15 +1073,115 @@
     // Materialize - Initializers
     $(document).ready(function () {
       $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
     })
 
-    // Project Card Reveal Function - FIXED
+    // Mobile Menu Functions
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      
+      mobileMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    }
+
+    function closeMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      
+      mobileMenu.classList.remove('active');
+      menuToggle.classList.remove('active');
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      const navbar = document.querySelector('.top-navbar');
+      
+      if (mobileMenu.classList.contains('active') && 
+          !navbar.contains(event.target)) {
+        closeMobileMenu();
+      }
+    })
+
+    // Resume Functions
+    function showResume() {
+      // Hide all other sections
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach(section => {
+        if (section.id !== 'resume') {
+          section.style.display = 'none';
+        }
+      });
+      
+      // Show resume section
+      const resumeSection = document.getElementById('resume');
+      resumeSection.style.display = 'block';
+      
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      // Update navigation
+      updateNavigation('resume');
+    }
+
+    function closeResume() {
+      // Show all sections again
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach(section => {
+        if (section.id !== 'resume') {
+          section.style.display = 'block';
+        }
+      });
+      
+      // Hide resume section
+      const resumeSection = document.getElementById('resume');
+      resumeSection.style.display = 'none';
+      
+      // Scroll to intro
+      document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });
+      
+      // Update navigation
+      updateNavigation('intro');
+    }
+
+    function updateNavigation(currentSection) {
+      const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === '#' + currentSection) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    // Add active class to navigation links based on scroll position
+    window.addEventListener('scroll', function() {
+      // Don't update navigation if resume is showing
+      const resumeSection = document.getElementById('resume');
+      if (resumeSection && resumeSection.style.display === 'block') {
+        return;
+      }
+
+      const sections = document.querySelectorAll('section[id]:not(#resume)');
+      const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      if (current) {
+        updateNavigation(current);
+      }
+    })
+
+    // Project Card Reveal Function
     function toggleCardReveal(element) {
       const card = element.closest('.project-card');
       const cardReveal = card.querySelector('.card-reveal');
