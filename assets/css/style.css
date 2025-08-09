@@ -179,12 +179,20 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, #06b6d4, #7c3aed);
   color: #fff;
   margin-left: 1rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.12);
+  font-weight: 700;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  border: 2px solid #fff;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
 }
 
 .nav-link.resume-link:hover, .nav-link.resume-link.active {
   background: linear-gradient(135deg, #2563eb, #7c3aed);
   color: #fff;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.18);
+  border-color: #6366f1;
 }
 
 /* Mobile Menu Toggle */

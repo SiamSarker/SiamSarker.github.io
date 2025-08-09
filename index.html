@@ -969,7 +969,7 @@
     </section>
 
     <!-- Resume Section (after Contact) -->
-    <section id="resume" class="section scrollspy" style="display: none;">
+    <section id="resume" class="section scrollspy">
       <h3 class="page-title white-text teal">Resume</h3>
       <div class="container center-align">
         <div class="resume-container">
@@ -1050,43 +1050,13 @@
     })
 
     // Resume Functions
+    // (No longer hide/show sections, just scroll)
     function showResume() {
-      // Hide all other sections
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach(section => {
-        if (section.id !== 'resume') {
-          section.style.display = 'none';
-        }
-      });
-      
-      // Show resume section
-      const resumeSection = document.getElementById('resume');
-      resumeSection.style.display = 'block';
-      
-      // Scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      
-      // Update navigation
+      document.getElementById('resume').scrollIntoView({ behavior: 'smooth' });
       updateNavigation('resume');
     }
-
     function closeResume() {
-      // Show all sections again
-      const sections = document.querySelectorAll('section[id]');
-      sections.forEach(section => {
-        if (section.id !== 'resume') {
-          section.style.display = 'block';
-        }
-      });
-      
-      // Hide resume section
-      const resumeSection = document.getElementById('resume');
-      resumeSection.style.display = 'none';
-      
-      // Scroll to intro
       document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });
-      
-      // Update navigation
       updateNavigation('intro');
     }
 
