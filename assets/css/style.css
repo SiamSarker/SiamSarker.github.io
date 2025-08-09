@@ -1240,3 +1240,212 @@ html {
     border-radius: 8px;
   }
 }
+
+/* Modern Education Card */
+.education-card-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.education-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.10);
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto 2.5rem auto;
+  border: 1.5px solid #f3f4f6;
+}
+
+.edu-header-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.edu-logo-badge {
+  width: 64px;
+  height: 64px;
+  background: #f3f4f6;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+.edu-logo-badge img {
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 12px;
+}
+
+.edu-header-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.edu-institution {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #4f46e5;
+  letter-spacing: 0.5px;
+}
+
+.edu-meta {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+
+.edu-degree {
+  font-size: 1rem;
+  color: #22223b;
+  margin-bottom: 0.1rem;
+}
+
+.edu-cgpa {
+  font-size: 1rem;
+  color: #2563eb;
+  margin-bottom: 0.1rem;
+}
+
+.edu-courseworks {
+  margin-top: 1.2rem;
+  width: 100%;
+}
+
+.edu-course-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #6366f1;
+  margin-bottom: 0.5rem;
+}
+
+.edu-bullets {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+  color: #22223b;
+  font-size: 1.05rem;
+}
+
+.edu-bullets li {
+  margin-bottom: 0.7rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    padding: 1.2rem 1rem 1rem 1rem;
+  }
+  .edu-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .edu-logo-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+  }
+  .edu-logo-badge img {
+    max-width: 32px;
+    max-height: 32px;
+    border-radius: 8px;
+  }
+}
+
+/* Consistent vertical spacing for all main cards */
+.project-card,
+#skills .card,
+.education-card,
+.contact-item,
+.resume-container {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Remove white gap on scroll: adjust scroll-margin-top for all sections */
+.section {
+  scroll-margin-top: 90px;
+}
+
+/* Resume card polish */
+.resume-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.10);
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1.5px solid #f3f4f6;
+}
+.resume-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+.resume-download-btn, .resume-view-btn {
+  background: linear-gradient(135deg, #06b6d4, #7c3aed) !important;
+  color: #fff !important;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1.2rem;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+  letter-spacing: 0.2px;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.resume-download-btn:hover, .resume-view-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+}
+.resume-close-btn {
+  background: #e5e7eb !important;
+  color: #22223b !important;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1.2rem;
+  margin-left: 0.5rem;
+}
+.resume-viewer {
+  width: 100%;
+  min-height: 600px;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+}
+.resume-viewer iframe {
+  border: none;
+  width: 100%;
+  min-height: 600px;
+}
+
+@media (max-width: 768px) {
+  .project-card,
+  #skills .card,
+  .education-card,
+  .contact-item,
+  .resume-container {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .resume-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+  .resume-viewer, .resume-viewer iframe {
+    min-height: 350px;
+  }
+}
