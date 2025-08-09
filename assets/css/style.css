@@ -692,3 +692,318 @@ small {
     background-position-x: 30%;
   }
 }
+
+/* Projects section - Modern Card Design */
+.project-card {
+  position: relative;
+  height: 100%;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.project-card .card-content {
+  padding: 20px;
+  background: white;
+  position: relative;
+}
+
+.project-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #004d40;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.project-card .card-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.project-card .card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+}
+
+.project-card .view-details-btn {
+  background: #004d40;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.project-card .view-details-btn:hover {
+  background: #00695c;
+  color: white;
+}
+
+.project-card .external-link-btn {
+  background: #00796b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.project-card .external-link-btn:hover {
+  background: #004d40;
+  transform: scale(1.1);
+}
+
+/* Card Reveal - Modern Design */
+.project-card .card-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  padding: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.project-card .card-reveal.active {
+  transform: translateY(0);
+}
+
+.project-card .card-reveal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 15px 20px;
+  border-bottom: 2px solid #e9ecef;
+  flex-shrink: 0;
+}
+
+.project-card .card-reveal-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #004d40;
+  margin: 0;
+}
+
+.project-card .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card .close-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.project-card .card-reveal-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  padding-right: 15px;
+  min-height: 200px;
+}
+
+.project-card .card-reveal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-card .card-reveal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.project-card .card-reveal-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.project-card .card-reveal-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.project-card .card-reveal-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-card .card-reveal-content li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.5;
+}
+
+.project-card .card-reveal-content li:last-child {
+  border-bottom: none;
+}
+
+.project-card .card-reveal-content li b {
+  color: #004d40;
+  font-weight: 600;
+}
+
+.project-card .card-reveal-footer {
+  padding: 12px 20px;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+  flex-shrink: 0;
+  background: #f8f9fa;
+}
+
+.project-card .card-reveal-footer .btn {
+  background: #00796b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.project-card .card-reveal-footer .btn:hover {
+  background: #004d40;
+  color: white;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .project-card .card-image {
+    height: 180px;
+  }
+  
+  .project-card .card-content {
+    padding: 15px;
+  }
+  
+  .project-card .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-card .card-description {
+    font-size: 0.85rem;
+  }
+  
+  .project-card .card-actions {
+    padding: 12px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .project-card .view-details-btn,
+  .project-card .external-link-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .project-card .card-reveal-header {
+    padding: 15px 15px 10px 15px;
+  }
+  
+  .project-card .card-reveal-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-card .card-reveal-content {
+    padding: 15px;
+    padding-right: 10px;
+  }
+  
+  .project-card .card-reveal-content li {
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+  
+  .project-card .card-reveal-footer {
+    padding: 12px 15px;
+  }
+}
+
+/* Override Materialize default card styles for projects */
+#projects .card.medium {
+  height: auto;
+  min-height: 400px;
+}
+
+#projects .card.medium .card-image {
+  height: 200px;
+}
+
+#projects .card.medium .card-content {
+  padding: 20px;
+}
+
+#projects .card.medium .card-reveal {
+  padding: 0;
+  background: white;
+}
+
+/* Ensure proper spacing for project cards */
+#projects .col.s12.m6.l4 {
+  margin-bottom: 30px;
+}
