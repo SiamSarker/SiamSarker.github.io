@@ -1048,3 +1048,195 @@ html {
 .card, .project-card {
   animation: fadeInUp 0.6s ease-out;
 }
+
+/* Modern Experience Timeline - Improved Readability */
+.experience-timeline {
+  position: relative;
+  padding-left: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exp-timeline-item {
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.exp-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.exp-timeline-dot {
+  position: absolute;
+  left: -24px;
+  top: 32px;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.15);
+  border: 3px solid #fff;
+  z-index: 2;
+}
+
+.experience-timeline:before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #c7d2fe 0%, #a5b4fc 100%);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.exp-timeline-item:last-child:after {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 48px;
+  width: 4px;
+  height: calc(100% - 48px);
+  background: transparent;
+  z-index: 1;
+}
+
+.exp-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.08);
+  padding: 2rem 2rem 1.5rem 2rem;
+  margin-left: 0;
+  position: relative;
+  z-index: 3;
+  transition: box-shadow 0.2s;
+  border: 1.5px solid #f3f4f6;
+}
+
+.exp-card + .exp-card {
+  margin-top: 2.5rem;
+}
+
+.exp-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.16);
+  border-color: #e0e7ff;
+}
+
+.exp-header-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.exp-logo-badge {
+  width: 64px;
+  height: 64px;
+  background: #f3f4f6;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+.exp-logo-badge img {
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 12px;
+}
+
+.exp-header-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.exp-company {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #4f46e5;
+  letter-spacing: 0.5px;
+}
+
+.exp-role {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.exp-meta {
+  font-size: 0.95rem;
+  color: #a1a1aa;
+  margin-top: 0.1rem;
+}
+
+.exp-bullets {
+  margin: 1.2rem 0 0.7rem 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+  color: #22223b;
+  font-size: 1.08rem;
+}
+
+.exp-bullets li {
+  margin-bottom: 1.1rem;
+  line-height: 1.8;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 0.5rem;
+}
+
+.exp-bullets li:last-child {
+  border-bottom: none;
+}
+
+.exp-tools-row {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.exp-tool {
+  display: inline-block;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  padding: 0.3rem 1rem;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+  letter-spacing: 0.2px;
+  transition: background 0.2s;
+}
+
+.exp-tool:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+}
+
+@media (max-width: 768px) {
+  .experience-timeline {
+    padding-left: 20px;
+  }
+  .exp-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .exp-card {
+    padding: 1.2rem 1rem 1rem 1rem;
+  }
+  .exp-logo-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+  }
+  .exp-logo-badge img {
+    max-width: 32px;
+    max-height: 32px;
+    border-radius: 8px;
+  }
+}
