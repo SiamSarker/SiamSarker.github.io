@@ -985,6 +985,9 @@
       menuToggle.classList.remove('active');
     }
 
+    window.toggleMobileMenu = toggleMobileMenu;
+    window.closeMobileMenu  = closeMobileMenu;
+    
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
       const mobileMenu = document.getElementById('mobileMenu');
