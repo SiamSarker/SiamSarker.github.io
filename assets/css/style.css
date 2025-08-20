@@ -210,10 +210,10 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(37, 99, 235, 0.1);
 }
 
-.hamburger-line {
+.top-navbar .hamburger-line {
   width: 24px;
   height: 3px;
-  background: var(--text-primary);
+  background: var(--background-primary) !important;
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -228,6 +228,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* mobile menu handled */
+@media (max-width: 768px) {
+  .mobile-menu-toggle { 
+    display: flex !important;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1200; 
+  }   /* was display:none */
+  .navbar-menu { display: none; }
+
+  /* center name/designation */
+  .navbar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-brand { margin: 0 auto; }
+  .brand-text { text-align: center; }
 }
 
 /* Mobile Navigation */
