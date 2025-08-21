@@ -1496,7 +1496,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin: 0 auto 2.5rem auto;
+  margin: 2.5rem auto;
   border: 1.5px solid #f3f4f6;
 }
 
@@ -1622,10 +1622,12 @@ html {
 
 @media (max-width: 600px) {
   .about-card {
-    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    padding: 0.8rem 1rem 1rem 1rem;
+    margin-top: 1.5rem;
+    max-width: 95%;
   }
   .about-final-line {
     margin-top: 1.2rem;
-    font-size: 1.01rem;
+    font-size: 0.95rem;
   }
 }
