@@ -1623,11 +1623,19 @@ html {
 @media (max-width: 600px) {
   .about-card {
     padding: 0.8rem 1rem 1rem 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     max-width: 95%;
   }
   .about-final-line {
     margin-top: 1.2rem;
     font-size: 0.95rem;
+  }
+
+  .page-title.white-text.teal {
+    color: white !important;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    padding: 2rem 0;
+    margin-bottom: 0;
+    margin-top: 2rem;
   }
 }
