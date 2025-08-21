@@ -344,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro.section .container {
   position: relative;
   z-index: 2;
-  color: white;
+  color: transparent;
 }
 
 #intro.section h2 {
@@ -1115,7 +1115,7 @@ html {
   content: '';
   position: absolute;
   left: -16px;
-  top: 0;
+  top: -1.5rem;
   bottom: 0;
   width: 4px;
   background: linear-gradient(180deg, #c7d2fe 0%, #a5b4fc 100%);
@@ -1139,6 +1139,7 @@ html {
   border-radius: 1.25rem;
   box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.08);
   padding: 2rem 2rem 1.5rem 2rem;
+  margin-top: 1.5rem;
   margin-left: 0;
   position: relative;
   z-index: 3;
@@ -1623,7 +1624,6 @@ html {
 @media (max-width: 600px) {
   .about-card {
     padding: 0.8rem 1rem 1rem 1rem;
-    margin-top: 1rem;
     max-width: 95%;
   }
   .about-final-line {
