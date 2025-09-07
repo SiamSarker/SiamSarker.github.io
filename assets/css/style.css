@@ -176,17 +176,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link.resume-link {
-  background: linear-gradient(135deg, #06b6d4, #7c3aed);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  margin-left: 1rem;
-  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.12);
   font-weight: 700;
-  border-radius: 2rem;
-  padding: 0.75rem 2rem;
   border: 2px solid #fff;
-  letter-spacing: 0.5px;
-  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  border-radius: 12px;
+  padding: 1rem 2.2rem;
+  margin-left: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
+
 
 .nav-link.resume-link:hover, .nav-link.resume-link.active {
   background: linear-gradient(135deg, #2563eb, #7c3aed);
@@ -230,7 +233,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* mobile menu handled */
 @media (max-width: 768px) {
 
   .resume-actions {
@@ -918,8 +920,8 @@ nav,
 nav *,
 .navbar-container * {
   background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
+  box-shadow: none ;
+  border: none;
 }
 
 .top-navbar {
