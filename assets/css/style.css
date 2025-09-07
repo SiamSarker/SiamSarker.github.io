@@ -1638,6 +1638,13 @@ html {
 }
 
 @media (max-width: 900px) {
+  #skills .col {
+    padding: 1rem;
+    text-align: center;
+    transition: var(--transition);
+    white-space: normal;
+    font-size: 0.8rem;
+  }
   .about-row {
     flex-direction: column;
     gap: 2rem;
