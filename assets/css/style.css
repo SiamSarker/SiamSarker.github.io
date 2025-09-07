@@ -605,7 +605,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: .2rem .5rem;
   background: var(--background-secondary);
   border-top: 1px solid var(--border-light);
 }
@@ -614,7 +614,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.55rem .5rem;
   border-radius: var(--radius-md);
   font-weight: 500;
   cursor: pointer;
@@ -749,7 +749,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.55rem .5rem;
   border-radius: var(--radius-md);
   font-weight: 500;
   cursor: pointer;
@@ -1609,6 +1609,21 @@ html {
   font-weight: 600;
   text-align: center;
   letter-spacing: 0.2px;
+}
+
+/* Override Materialize defaults */
+.project-card.card.large .card-image {
+  height: 230px !important;  /* force override */
+  overflow: hidden;          /* prevents image overflow */
+}
+
+.project-card.card.large .card-content {
+  height: 212px !important;  /* force override */
+           /*  overflow-y: auto; scroll if content is too much */
+}
+
+.card .card-content .card-title {
+  line-height: 28px !important;
 }
 
 @media (max-width: 900px) {
