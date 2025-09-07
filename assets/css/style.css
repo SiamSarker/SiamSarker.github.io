@@ -922,9 +922,6 @@ nav *,
   .navbar-container {
     padding: 0 1rem;
   }
-  .brand-text {
-    display: none;
-  }
   .navbar-menu {
     background: none;
   }
