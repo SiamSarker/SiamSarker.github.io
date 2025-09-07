@@ -932,8 +932,8 @@
             <a href="https://siamsarker.github.io/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf" download class="resume-download-btn">
               <i class="fa fa-download"></i> Download PDF
             </a>
-            <button onclick="closeResume()" class="resume-close-btn">
-              <i class="fa fa-times"></i> Close
+            <button onclick="scrollToTop()" class="resume-close-btn">
+              <i class="fa fa-arrow-up"></i> Go to TOP
             </button>
           </div>
           <div class="resume-viewer">
@@ -1013,6 +1013,14 @@
     function closeResume() {
       document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });
       updateNavigation('intro');
+    }
+
+   
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
 
     function updateNavigation(currentSection) {

@@ -232,6 +232,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* mobile menu handled */
 @media (max-width: 768px) {
+
+  .resume-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    flex-direction: column;
+}
+
   .mobile-menu-toggle { 
     display: flex !important;
     position: absolute;
