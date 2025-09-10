@@ -1012,10 +1012,30 @@
   
 
     function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      // Force smooth scrolling with animation
+      const targetElement = document.getElementById('intro');
+      const startPosition = window.pageYOffset;
+      const targetPosition = targetElement.offsetTop;
+      const distance = targetPosition - startPosition;
+      const duration = 1000; // 1 second
+      let start = null;
+      
+      function animation(currentTime) {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+      
+      function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+      
+      requestAnimationFrame(animation);
     }
 
     function updateNavigation(currentSection) {
