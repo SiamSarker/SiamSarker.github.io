@@ -1,8 +1,8 @@
-name: Deploy new-design to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [new-design]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
