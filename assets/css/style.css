@@ -1311,8 +1311,8 @@ html {
 }
 
 .edu-logo-badge {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   background: #f3f4f6;
   border-radius: 16px;
   display: flex;
@@ -1322,8 +1322,8 @@ html {
 }
 
 .edu-logo-badge img {
-  max-width: 48px;
-  max-height: 48px;
+  max-width: 60px;
+  max-height: 60px;
   border-radius: 12px;
 }
 
@@ -1390,18 +1390,19 @@ html {
   }
   .edu-header-row {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
   }
   .edu-logo-badge {
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
   }
   .edu-logo-badge img {
-    max-width: 32px;
-    max-height: 32px;
-    border-radius: 8px;
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 12px;
   }
 }
 
