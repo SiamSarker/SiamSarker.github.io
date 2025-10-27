@@ -1,7 +1,12 @@
+# https://siamsarker.me/robots.txt
+
 # Group 1
 User-agent: Googlebot
-Disallow: /nogooglebot/
+Allow: /
 
-# Group 2
+# Group 2 - All other bots
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://siamsarker.me/sitemap.xml
