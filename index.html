@@ -282,6 +282,38 @@
     <section id="experience" class="section scrollspy">
       <h3 class="page-title white-text teal">Experience</h3>
       <div class="container experience-timeline">
+        <!-- Experience 0 -->
+        <div class="exp-timeline-item">
+          <div class="exp-timeline-dot"></div>
+          <div class="exp-card">
+            <div class="exp-header-row">
+              <div class="exp-logo-badge">
+                <img src="assets/img/webalive-logo.png" alt="WebAlive logo" />
+              </div>
+              <div class="exp-header-details">
+                <div class="exp-company">WEBALIVE</div>
+                <div class="exp-role">Software Engineer</div>
+                <div class="exp-meta">Jan 2026 – Present &bull; Melbourne, Australia</div>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Architected Hykmah, a unified SSO identity ecosystem using Java (Keycloak) with custom OIDC flow modifications and token enrichment, enabling seamless authentication across multiple products.</li>
+              <li>Built a centralized user provisioning service using FastAPI and MongoDB to manage cross-product access and identity lifecycle.</li>
+              <li>Developed backend systems for Exsited and WebCommander using Grails framework.</li>
+              <li>Contributed to Umerang backend development using C#.</li>
+              <li>Data persistence managed via MariaDB for identity and product data.</li>
+            </ul>
+            <div class="exp-tools-row">
+              <span class="exp-tool">Java</span>
+              <span class="exp-tool">Keycloak</span>
+              <span class="exp-tool">FastAPI</span>
+              <span class="exp-tool">MongoDB</span>
+              <span class="exp-tool">MariaDB</span>
+              <span class="exp-tool">Grails</span>
+              <span class="exp-tool">C#</span>
+            </div>
+          </div>
+        </div>
         <!-- Experience 1 -->
         <div class="exp-timeline-item">
           <div class="exp-timeline-dot"></div>
@@ -351,6 +383,41 @@
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container center-align">
         <div class="row">
+
+          <div class="col s12 m6 l4">
+            <div class="project-card card large">
+              <div class="card-image">
+                <img alt="Hykmah Ecosystem" src="assets/img/projects/hykmah.png" />
+              </div>
+              <div class="card-content">
+                <h5 class="card-title">Hykmah Ecosystem</h5>
+                <p class="card-description">
+                  A unified SSO identity platform with custom OIDC flow and token enrichment, enabling single login across multiple products.
+                </p>
+              </div>
+              <div class="card-actions">
+                <button class="view-details-btn" onclick="toggleCardReveal(this)">
+                  <i class="mdi-navigation-more-vert"></i> View Details
+                </button>
+              </div>
+              <div class="card-reveal">
+                <div class="card-reveal-header">
+                  <h5 class="card-reveal-title">Hykmah Ecosystem</h5>
+                  <button class="close-btn" onclick="toggleCardReveal(this)">
+                    <i class="mdi-navigation-close"></i>
+                  </button>
+                </div>
+                <div class="card-reveal-content">
+                  <ul>
+                    <li><b>Tools:</b> Java (Keycloak), FastAPI, MariaDB, MongoDB, C#, Grails</li>
+                    <li>Built unified SSO identity platform with custom OIDC flow and token enrichment using Keycloak.</li>
+                    <li>Developed centralized user provisioning service with FastAPI and MongoDB for cross-product identity lifecycle management.</li>
+                    <li>Contributed to product backends — Exsited and WebCommander (Grails), Umerang (C#).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="col s12 m6 l4">
             <div class="project-card card large">
@@ -834,11 +901,23 @@
                 <img alt="NestJS Framework" src="assets/img/skills/nestjs.png" class="responsive-img" />Nest.js
               </div>
               <div class="col s4 m2">
+                <img alt="FastAPI Framework" src="assets/img/skills/fastapi.svg" class="responsive-img" />FastAPI
+              </div>
+              <div class="col s4 m2">
                 <img alt="Socket Programming" src="assets/img/skills/socket.png" class="responsive-img" />Socket Programming
               </div>
-              <!-- <div class="col s4 m2">
-                <img alt="" src="assets/img/skills/api.png" class="responsive-img" />REST APIs
-              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Identity Management -->
+        <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">Identity Management</h4>
+            <div class="row text-center">
+              <div class="col s4 m2">
+                <img alt="Keycloak SSO" src="assets/img/skills/keycloak.png" class="responsive-img" />Keycloak
+              </div>
             </div>
           </div>
         </div>
@@ -880,6 +959,21 @@
               </div>
               <div class="col s4 m2">
                 <img alt="PostgreSQL Database" src="assets/img/postgresql-logo.png" class="responsive-img" />PostgreSQL
+              </div>
+              <div class="col s4 m2">
+                <img alt="MongoDB Database" src="assets/img/skills/mongodb.svg" class="responsive-img" />MongoDB
+              </div>
+              <div class="col s4 m2">
+                <img alt="DuckDB Database" src="assets/img/skills/duckdb.png" class="responsive-img" />DuckDB
+              </div>
+              <div class="col s4 m2">
+                <img alt="Apache Parquet" src="assets/img/skills/parquet.svg" class="responsive-img" />Parquet
+              </div>
+              <div class="col s4 m2">
+                <img alt="RabbitMQ" src="assets/img/skills/rabbitmq.svg" class="responsive-img" />RabbitMQ
+              </div>
+              <div class="col s4 m2">
+                <img alt="Docker" src="assets/img/skills/docker.svg" class="responsive-img" />Docker
               </div>
               <div class="col s4 m2">
                 <img alt="Git Version Control" src="assets/img/git.png" class="responsive-img" />Git
