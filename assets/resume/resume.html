@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md Siam Hossain Sarker — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ─────────────────────────────────────────────────────────
+       Modern resume — dark navy text + amber accent
+       Color tokens:
+       - Text primary    #0f172a
+       - Text body       #334155
+       - Text muted      #64748b
+       - Text light      #94a3b8
+       - Accent          #f59e0b
+       - Border          #e2e8f0
+       - Subtle bg       #f8fafc
+       ───────────────────────────────────────────────────────── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #0f172a;
+      background: #fff;
+      padding: 44px 52px;
+      max-width: 880px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: #f59e0b;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    a:hover { color: #d97706; }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      padding-bottom: 22px;
+      margin-bottom: 26px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .header-left h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.6px;
+      line-height: 1.05;
+    }
+    .header-left .tagline {
+      font-size: 12.5px;
+      color: #475569;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+    .header-left .location {
+      font-size: 11.5px;
+      color: #94a3b8;
+      margin-top: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .header-right {
+      text-align: right;
+      font-size: 11.5px;
+      color: #475569;
+      line-height: 1.85;
+      white-space: nowrap;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .header-right .contact-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .contact-key {
+      color: #94a3b8;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      min-width: 30px;
+      text-align: right;
+    }
+
+    /* ── Section ── */
+    .section { margin-bottom: 22px; }
+    .section:last-child { margin-bottom: 0; }
+
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      border-bottom: 2px solid #f59e0b;
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── Summary ── */
+    .summary-text {
+      font-size: 12.5px;
+      color: #334155;
+      line-height: 1.65;
+    }
+    .summary-text em {
+      font-style: normal;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    /* ── Experience ── */
+    .exp-item { margin-bottom: 16px; }
+    .exp-item:last-child { margin-bottom: 0; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .exp-title {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: #0f172a;
+    }
+    .exp-sub {
+      font-size: 12px;
+      color: #475569;
+      margin-bottom: 8px;
+      margin-top: 1px;
+    }
+    .exp-sub em {
+      font-style: normal;
+      color: #0f172a;
+      font-weight: 600;
+    }
+    .exp-date {
+      font-size: 11px;
+      color: #64748b;
+      white-space: nowrap;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .bullets {
+      list-style: none;
+      padding-left: 14px;
+    }
+    .bullets li {
+      font-size: 12px;
+      color: #334155;
+      margin-bottom: 4px;
+      line-height: 1.55;
+      position: relative;
+    }
+    .bullets li::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 8px;
+      width: 4px;
+      height: 4px;
+      background: #f59e0b;
+      border-radius: 50%;
+    }
+    .bullets li em {
+      font-style: normal;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 9px;
+    }
+    .tech-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      background: #f8fafc;
+      color: #334155;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* ── Education ── */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .edu-degree {
+      font-weight: 700;
+      font-size: 13px;
+      color: #0f172a;
+    }
+    .edu-inst {
+      font-size: 12px;
+      color: #475569;
+      margin-top: 3px;
+    }
+    .edu-result {
+      font-size: 12px;
+      color: #334155;
+      margin-top: 4px;
+    }
+    .edu-result strong { color: #0f172a; font-weight: 600; }
+    .edu-date {
+      font-size: 11px;
+      color: #64748b;
+      white-space: nowrap;
+      font-family: 'JetBrains Mono', monospace;
+      padding-top: 3px;
+    }
+
+    /* ── Projects ── */
+    .project-item { margin-bottom: 11px; }
+    .project-item:last-child { margin-bottom: 0; }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .project-name {
+      font-weight: 700;
+      font-size: 12.5px;
+      color: #0f172a;
+    }
+    .project-stack {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #475569;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 2px 8px;
+      white-space: nowrap;
+    }
+    .project-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #94a3b8;
+      white-space: nowrap;
+    }
+    .project-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      white-space: nowrap;
+    }
+    .project-desc {
+      font-size: 12px;
+      color: #334155;
+      margin-top: 4px;
+      line-height: 1.55;
+    }
+    .project-desc em {
+      font-style: normal;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 32px;
+    }
+    .skill-row {
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.5;
+    }
+    .skill-label {
+      font-weight: 700;
+      color: #0f172a;
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 1px;
+      color: #f59e0b;
+    }
+
+    /* ── Languages / Memberships ── */
+    .lang-row {
+      font-size: 12px;
+      color: #334155;
+      margin-bottom: 5px;
+      line-height: 1.5;
+    }
+    .lang-row:last-child { margin-bottom: 0; }
+    .lang-row strong { color: #0f172a; font-weight: 600; }
+
+    /* ── Achievements ── */
+    .achieve-item { margin-bottom: 9px; }
+    .achieve-item:last-child { margin-bottom: 0; }
+    .achieve-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .achieve-title {
+      font-weight: 600;
+      font-size: 12.5px;
+      color: #0f172a;
+    }
+    .achieve-year {
+      font-size: 11px;
+      color: #64748b;
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+    }
+    .achieve-desc {
+      font-size: 11.5px;
+      color: #475569;
+      margin-top: 3px;
+      line-height: 1.55;
+    }
+
+    /* ── Certifications ── */
+    .cert-item {
+      margin-bottom: 4px;
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.5;
+    }
+    .cert-item:last-child { margin-bottom: 0; }
+    .cert-item strong { color: #0f172a; font-weight: 600; }
+    .cert-meta {
+      color: #94a3b8;
+      font-size: 10.5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── Publications ── */
+    .pub-item { margin-bottom: 9px; }
+    .pub-item:last-child { margin-bottom: 0; }
+    .pub-title {
+      font-weight: 600;
+      font-size: 12px;
+      color: #0f172a;
+      line-height: 1.4;
+    }
+    .pub-venue {
+      font-size: 11.5px;
+      color: #64748b;
+      margin-top: 3px;
+      line-height: 1.5;
+    }
+    .pub-venue strong { color: #334155; font-weight: 600; }
+
+    /* ── Print ── */
+    @media print {
+      body { padding: 28px 36px; font-size: 11.5px; max-width: 100%; }
+      .section { page-break-inside: avoid; }
+      a { color: #f59e0b !important; }
+    }
+
+    /* ── PDF compact mode ── */
+    body.pdf-mode {
+      font-size: 9.5px;
+      line-height: 1.4;
+      padding: 0;
+      max-width: 100%;
+    }
+    body.pdf-mode .header {
+      padding-bottom: 9px;
+      margin-bottom: 11px;
+      gap: 16px;
+    }
+    body.pdf-mode .header-left h1 { font-size: 18px; }
+    body.pdf-mode .header-left .tagline { font-size: 9px; margin-top: 3px; }
+    body.pdf-mode .header-left .location { font-size: 8.5px; margin-top: 2px; }
+    body.pdf-mode .header-right { font-size: 8.5px; line-height: 1.6; }
+    body.pdf-mode .contact-row { gap: 5px; }
+    body.pdf-mode .contact-key { font-size: 7.5px; min-width: 22px; }
+    body.pdf-mode .section { margin-bottom: 8px; }
+    body.pdf-mode .section-title {
+      font-size: 8.5px;
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+      letter-spacing: 1.2px;
+    }
+    body.pdf-mode .summary-text { font-size: 9.5px; line-height: 1.4; }
+    body.pdf-mode .exp-item { margin-bottom: 6px; }
+    body.pdf-mode .exp-title { font-size: 10px; }
+    body.pdf-mode .exp-sub { font-size: 8.5px; margin-bottom: 3px; }
+    body.pdf-mode .exp-date { font-size: 8.5px; }
+    body.pdf-mode .bullets { padding-left: 11px; }
+    body.pdf-mode .bullets li { font-size: 9px; margin-bottom: 1px; line-height: 1.4; }
+    body.pdf-mode .bullets li::before { left: -9px; top: 5px; width: 3px; height: 3px; }
+    body.pdf-mode .tech-tags { display: none; }
+    body.pdf-mode .edu-degree { font-size: 10px; }
+    body.pdf-mode .edu-inst, body.pdf-mode .edu-result { font-size: 9px; margin-top: 2px; }
+    body.pdf-mode .project-item { margin-bottom: 5px; }
+    body.pdf-mode .project-name { font-size: 9.5px; }
+    body.pdf-mode .project-stack, body.pdf-mode .project-meta { font-size: 8px; padding: 1px 5px; }
+    body.pdf-mode .project-desc { font-size: 8.8px; margin-top: 2px; line-height: 1.4; }
+    body.pdf-mode .skills-grid { gap: 3px 22px; }
+    body.pdf-mode .skill-row { font-size: 8.8px; line-height: 1.35; }
+    body.pdf-mode .skill-label { font-size: 8px; margin-bottom: 0; }
+    body.pdf-mode .lang-row { font-size: 9px; margin-bottom: 2px; }
+    body.pdf-mode .achieve-item { margin-bottom: 5px; }
+    body.pdf-mode .achieve-title { font-size: 9.5px; }
+    body.pdf-mode .achieve-desc { font-size: 8.8px; margin-top: 1px; line-height: 1.4; }
+    body.pdf-mode .achieve-year { font-size: 8.5px; }
+    body.pdf-mode .cert-item { margin-bottom: 2px; font-size: 9px; }
+    body.pdf-mode .cert-meta { font-size: 8px; }
+    body.pdf-mode .pub-item { margin-bottom: 4px; }
+    body.pdf-mode .pub-title { font-size: 9.5px; }
+    body.pdf-mode .pub-venue { font-size: 8.8px; margin-top: 1px; line-height: 1.4; }
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      body { padding: 24px 20px; font-size: 12px; }
+      .header { flex-direction: column; gap: 14px; }
+      .header-right { text-align: left; }
+      .header-right .contact-row { justify-content: flex-start; }
+      .contact-key { text-align: left; }
+      .edu-item, .project-header, .exp-header, .achieve-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+      }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="header">
+    <div class="header-left">
+      <h1>Md Siam Hossain Sarker</h1>
+      <div class="tagline">Software Engineer · Distributed Systems &amp; Identity Infrastructure</div>
+      <div class="location">Bangladesh · Open to relocation</div>
+    </div>
+    <div class="header-right">
+      <div class="contact-row">
+        <span class="contact-key">mail</span>
+        <a href="mailto:m.siamhossainsarker@gmail.com">m.siamhossainsarker@gmail.com</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-key">tel</span>
+        <span>+880 1826 557650</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-key">gh</span>
+        <a href="https://github.com/SiamSarker" target="_blank" rel="noopener">github.com/SiamSarker</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-key">in</span>
+        <a href="https://www.linkedin.com/in/siam-sarker/" target="_blank" rel="noopener">linkedin.com/in/siam-sarker</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-key">web</span>
+        <a href="https://siamsarker.me" target="_blank" rel="noopener">siamsarker.me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Summary ── -->
+  <section class="section">
+    <div class="section-title">Summary</div>
+    <p class="summary-text">
+      Software Engineer with 3+ years building scalable backend systems, distributed services, and identity infrastructure across mining, healthcare, and SaaS domains. Currently at <em>WebAlive</em> (Melbourne), architecting <em>Hykmah</em> — a multi-product SSO platform operating at the OIDC/PKCE protocol level. <em>IEEE</em> member, <em>Springer &amp; IEEE</em> published researcher, international hackathon finalist.
+    </p>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">Software Engineer</span>
+        <span class="exp-date">Jan 2026 — Present</span>
+      </div>
+      <div class="exp-sub"><em>WebAlive</em> · Melbourne, Australia (Remote)</div>
+      <ul class="bullets">
+        <li>Architecting <em>Hykmah</em> — unified SSO platform with custom OIDC/PKCE flows in Keycloak, managing cross-product state, permissions, and auth boundaries.</li>
+        <li>Built centralised user provisioning service (FastAPI + MongoDB) for cross-product identity lifecycle and access control.</li>
+        <li>Developed backend systems for Exsited and WebCommander in Grails; contributed Umerang backend in C# with GDPR-compliant schema design (merchants, sessions, events).</li>
+      </ul>
+      <div class="tech-tags">
+        <span class="tech-tag">Java</span>
+        <span class="tech-tag">Keycloak</span>
+        <span class="tech-tag">OIDC/PKCE</span>
+        <span class="tech-tag">FastAPI</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">Grails</span>
+        <span class="tech-tag">C#</span>
+        <span class="tech-tag">MariaDB</span>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">Software Engineer</span>
+        <span class="exp-date">May 2023 — Dec 2025</span>
+      </div>
+      <div class="exp-sub"><em>Bit Mascot (Pvt.) Ltd.</em> · Dhaka, Bangladesh</div>
+      <ul class="bullets">
+        <li>Designed and optimised RESTful APIs across MySQL, PostgreSQL, MongoDB, and DuckDB for high-volume production workloads, following Repository-Service and MVC patterns.</li>
+        <li>Built GIS-based spatial query systems for two Australian mining platforms (<em>Mining Hub</em>, <em>Mining Bull</em>) using PostGIS and spatial indexes for real-time geospatial filtering.</li>
+        <li>Implemented async data pipelines (RabbitMQ, Laravel Schedulers) and WebSocket layers to decouple bottlenecks in enterprise workflows.</li>
+        <li>Integrated SendGrid, Autobill SDK, and webhook-driven flows across <em>Locum West</em>, <em>Nintendo Repair</em>, and <em>Regional Tech Hub</em>.</li>
+      </ul>
+      <div class="tech-tags">
+        <span class="tech-tag">PHP</span>
+        <span class="tech-tag">Laravel</span>
+        <span class="tech-tag">CakePHP</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">PostgreSQL/GIS</span>
+        <span class="tech-tag">MySQL</span>
+        <span class="tech-tag">RabbitMQ</span>
+        <span class="tech-tag">WebSockets</span>
+        <span class="tech-tag">DuckDB</span>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">Undergraduate Teaching Assistant</span>
+        <span class="exp-date">Nov 2021 — May 2023</span>
+      </div>
+      <div class="exp-sub"><em>United International University</em> · Dhaka, Bangladesh</div>
+      <ul class="bullets">
+        <li>TA for Structured Programming, OOP, DBMS, and Computer Networks labs; one-on-one mentoring in C/C++, Java, PHP, and MySQL.</li>
+        <li><em>President — UIU App Forum</em> (2020–2023): led 800+ member developer community with industry-partnered events on web3, mobile, and career development.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Selected Projects ── -->
+  <section class="section">
+    <div class="section-title">Selected Projects</div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <span class="project-name">Hykmah Ecosystem</span>
+        <span class="project-stack">Keycloak · FastAPI · MongoDB · Grails · C#</span>
+        <span class="project-meta">2026 — present</span>
+      </div>
+      <p class="project-desc">Unified SSO platform with custom OIDC/PKCE flows; single login across independent products with per-product authorisation. Centralised provisioning service manages cross-product access lifecycle.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <span class="project-name">Log Archiver</span>
+        <span class="project-stack">FastAPI · DuckDB · Apache Parquet · RabbitMQ</span>
+        <span class="project-meta">2025</span>
+      </div>
+      <p class="project-desc">Enterprise log archival platform with columnar Parquet storage for efficient analytics queries. RabbitMQ-decoupled ingestion sustains throughput under high load without blocking the write path.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <span class="project-name">Mining Hub &amp; Mining Bull</span>
+        <span class="project-stack">Laravel · Node.js · PostgreSQL/GIS</span>
+        <a href="https://mininghub.com/home" class="project-link" target="_blank" rel="noopener">↗ mininghub.com</a>
+      </div>
+      <p class="project-desc">REST APIs and GIS spatial query systems for two Australian mining platforms; real-time commodity tracking with geospatial filtering and spatial indexes.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <span class="project-name">Reed Graduation</span>
+        <span class="project-stack">CakePHP · MySQL · RabbitMQ</span>
+        <a href="https://www.reedevents.com.au/" class="project-link" target="_blank" rel="noopener">↗ reedevents.com.au</a>
+      </div>
+      <p class="project-desc">Graduation service platform for universities with CMS for editable certificate templates. Asynchronous certificate generation via RabbitMQ.</p>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <span class="project-name">Car-Story</span>
+        <span class="project-stack">Solidity · Ethereum · React</span>
+        <a href="https://github.com/SiamSarker" class="project-link" target="_blank" rel="noopener">↗ github</a>
+      </div>
+      <p class="project-desc">Decentralised vehicle history on Ethereum smart contracts; removes the need for a trusted central authority. Undergraduate thesis — published at <em>IEEE TENSYMP 2024</em>.</p>
+    </div>
+  </section>
+
+  <!-- ── Education ── -->
+  <section class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div>
+        <div class="edu-degree">BSc in Computer Science &amp; Engineering</div>
+        <div class="edu-inst">United International University · Dhaka, Bangladesh</div>
+        <div class="edu-result">CGPA <strong>3.90 / 4.00</strong> · 137 credits · 11 academic scholarships (3× full, 6× half, 2× quarter) · Thesis published at IEEE TENSYMP 2024</div>
+      </div>
+      <div class="edu-date">2019 — 2023</div>
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section class="section">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Languages</span>
+        Java, Python, TypeScript / JavaScript, PHP, C#, Solidity, C/C++
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Databases</span>
+        PostgreSQL / GIS, MySQL, MongoDB, DuckDB, MariaDB
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Backend</span>
+        Laravel, FastAPI, Node.js (Express, NestJS), Grails, CakePHP
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Async &amp; Messaging</span>
+        RabbitMQ, WebSockets, Apache Parquet, event-driven pipelines
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Identity &amp; Security</span>
+        Keycloak, OIDC, PKCE, OAuth2, token enrichment, access control
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Frontend</span>
+        React, React Native, jQuery, Ajax, ES6
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Blockchain</span>
+        Solidity, Ethereum, smart contract architecture
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Tooling</span>
+        Docker, Git, Linux, Postman, Selenium, LaTeX, Jira
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Publications ── -->
+  <section class="section">
+    <div class="section-title">Publications</div>
+    <div class="pub-item">
+      <div class="pub-title">Car-Story: A Decentralised Vehicle Information Storage System Based on Blockchain</div>
+      <div class="pub-venue"><strong>IEEE TENSYMP 2024</strong> — Ethereum smart contract architecture for trustless vehicle history verification.</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-title">UAVs in Green Health Care for Energy Efficiency and Real-Time Data Transmission</div>
+      <div class="pub-venue"><strong>Springer LNNS Vol. 665 · ICISS 2023</strong> — UAV-based healthcare data delivery with MobileNet real-time detection.</div>
+    </div>
+  </section>
+
+  <!-- ── Honours ── -->
+  <section class="section">
+    <div class="section-title">Honours &amp; Achievements</div>
+
+    <div class="achieve-item">
+      <div class="achieve-header">
+        <span class="achieve-title">International Blockchain Olympiad — Award of Distinction</span>
+        <span class="achieve-year">2023</span>
+      </div>
+      <div class="achieve-desc">Top 20 nationally, international finalist · 6th IBCOL, Amsterdam · Team "Unchained".</div>
+    </div>
+
+    <div class="achieve-item">
+      <div class="achieve-header">
+        <span class="achieve-title">ICPC Asia Dhaka Preliminary — Honorable Mention (×2)</span>
+        <span class="achieve-year">2020 — 2023</span>
+      </div>
+      <div class="achieve-desc">Three appearances across teams Songshoptok, CodeSpeed, and Brute Force.</div>
+    </div>
+
+    <div class="achieve-item">
+      <div class="achieve-header">
+        <span class="achieve-title">Hult Prize 2022 — 1st Runner-up (UIU)</span>
+        <span class="achieve-year">2022</span>
+      </div>
+      <div class="achieve-desc">Competed at the Islamabad Regional Summit.</div>
+    </div>
+
+    <div class="achieve-item">
+      <div class="achieve-header">
+        <span class="achieve-title">CSE Project Show — Runner-up</span>
+        <span class="achieve-year">2021 — 2022</span>
+      </div>
+      <div class="achieve-desc">System Analysis &amp; Design Lab (Fall '21), Software Engineering Lab (Spring '22).</div>
+    </div>
+  </section>
+
+  <!-- ── Certifications ── -->
+  <section class="section">
+    <div class="section-title">Certifications</div>
+    <div class="cert-item"><strong>Python for Everybody Specialization</strong> — Coursera / University of Michigan <span class="cert-meta">(Jul 2020)</span></div>
+    <div class="cert-item"><strong>PCAP: Programming Essentials in Python</strong> — Cisco Networking Academy <span class="cert-meta">(Jul 2020)</span></div>
+    <div class="cert-item"><strong>Introduction to Cloud Development</strong> — edX · HTML, CSS, JavaScript <span class="cert-meta">(Apr 2022)</span></div>
+    <div class="cert-item"><strong>Responsive Web Design</strong> — freeCodeCamp <span class="cert-meta">(Feb 2022)</span></div>
+  </section>
+
+  <!-- ── Languages &amp; Memberships ── -->
+  <section class="section">
+    <div class="section-title">Languages &amp; Memberships</div>
+    <div class="lang-row"><strong>Languages:</strong> Bengali (native) · English — Professional proficiency (IELTS 6.0 / B2)</div>
+    <div class="lang-row"><strong>IEEE</strong> Student Member · <strong>EMK Center</strong> General Member (since 2018)</div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    // Optional: html2pdf-based fallback download. Kept for backward compatibility
+    // but the portfolio's Resume section now links directly to the static PDF.
+    function downloadPDF() {
+      document.body.classList.add('pdf-mode');
+      const opt = {
+        margin:     [8, 10, 8, 10],
+        filename:   'Md_Siam_Hossain_Sarker_Resume.pdf',
+        image:      { type: 'jpeg', quality: 0.97 },
+        html2canvas: { scale: 2, useCORS: true, letterRendering: true, logging: false },
+        jsPDF:      { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak:  { mode: ['css', 'legacy'], avoid: ['.exp-item', '.project-item', '.pub-item', '.achieve-item'] }
+      };
+      html2pdf().set(opt).from(document.body).save().then(function () {
+        document.body.classList.remove('pdf-mode');
+      });
+    }
+    window.addEventListener('message', function (e) {
+      if (e.data === 'downloadPDF') downloadPDF();
+    });
+  </script>
+</body>
+</html>
