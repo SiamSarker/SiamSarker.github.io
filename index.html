@@ -13,7 +13,7 @@
   </script>
   
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
   <!-- Primary Meta Tags -->
@@ -140,6 +140,7 @@
         <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
         <li><a href="#resume" class="nav-link resume-link" onclick="event.preventDefault(); document.getElementById('resume').scrollIntoView({behavior:'smooth'});">Resume</a></li>
+        <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode"><i class="fa fa-moon-o" id="darkModeIcon"></i></button></li>
       </ul>
 
       <!-- Mobile Menu Toggle -->
@@ -160,40 +161,39 @@
         <li><a href="#education" class="mobile-nav-link" onclick="closeMobileMenu()">Education</a></li>
         <li><a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a></li>
         <li><a href="#resume" class="mobile-nav-link resume-link" onclick="closeMobileMenu(); event.preventDefault(); document.getElementById('resume').scrollIntoView({behavior:'smooth'});">Resume</a></li>
+        <li><a href="#" class="mobile-nav-link" onclick="event.preventDefault(); toggleDarkMode(); closeMobileMenu();" id="mobileDarkModeLink"><i class="fa fa-moon-o"></i> &nbsp;Dark Mode</a></li>
       </ul>
     </div>
   </header>
 
   <!-- Main Content-->
   <main>
-    <!-- First Section: Heading lines and image -->
+    <!-- First Section: Hero -->
     <section id="intro" class="section scrollspy full-height">
       <div class="container">
-        <div class="row">
-          <div class="col s12 m10 l8">
-            <div class="content">
-              <div class="caption">
-                <h2>Hi, I'm <span class="gradient-text">Md Siam Hossain Sarker.</span></h2>
-                <h5 class="intro-subtitle">A <span class="typing" style="font-weight: 600; color:#fbbf24"></span></h5>
-                <h5 class="intro-description">Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving complex and challenging real-world problems.</h5>
-              </div>
-              <div class="social">
-                <a href="https://linkedin.com/in/siam-sarker" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                  <button class="icon-btn linkedin">
-                    <i class="fa fa-linkedin"></i>
-                  </button>
-                </a>
-                <a href="https://github.com/siamsarker/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                  <button class="icon-btn github">
-                    <i class="fa fa-github"></i>
-                  </button>
-                </a>
-              </div>
-              <div class='buttons'>
-                <a href="#about" class="readme" aria-label="Read more about Siam Hossain">Read More</a>
-                <a href="#contact" class="contactme" aria-label="Contact Siam Hossain">Contact Me</a>
-              </div>
-            </div>
+        <div class="hero-content">
+          <div class="hero-eyebrow">Software Engineer &nbsp;·&nbsp; WebAlive, Melbourne</div>
+          <h1 class="hero-name">Siam Hossain</h1>
+          <p class="hero-tagline">
+            Building <strong>distributed systems</strong> and <strong>identity infrastructure</strong> that scale across products and teams.
+          </p>
+          <p class="hero-tagline" style="font-size:1rem; margin-bottom:2rem; color:rgba(255,255,255,0.55);">
+            3+ years shipping backend systems across mining, healthcare, and identity management. Currently architecting <strong style="color:rgba(255,255,255,0.8);">Hykmah</strong> — a multi-product SSO platform at WebAlive.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="hero-btn-primary">View Work</a>
+            <a href="#contact" class="hero-btn-secondary">Get in Touch</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://linkedin.com/in/siam-sarker" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/siamsarker/" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="mailto:m.siamhossainsarker@gmail.com" class="hero-social-link" aria-label="Email">
+              <i class="fa fa-envelope"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -212,10 +212,10 @@
                 <span class="about-role">Software Engineer</span>
               </div>
               <div class="about-intro" itemscope itemtype="https://schema.org/Person">
-                I am a passionate <span itemprop="jobTitle">Software Engineer</span> with over 2 years of professional experience, currently working at <span itemprop="worksFor">Bit Mascot (Pvt) Ltd</span>. My core expertise lies in backend development with <b>Node.js</b> and <b>Laravel</b>, focusing on building scalable APIs, streamlining system performance, and managing relational databases with precision.
+                I am a passionate <span itemprop="jobTitle">Software Engineer</span> with 3+ years of professional experience, currently at <span itemprop="worksFor">WebAlive</span> (Melbourne, Australia), architecting identity infrastructure and distributed backend systems. My core expertise spans <b>Java (Keycloak/OIDC)</b>, <b>Node.js</b>, <b>Laravel</b>, and <b>FastAPI</b>, focused on building scalable systems across identity management, mining, and healthcare domains.
               </div>
               <div class="about-specialization">
-                <b>Specialized in:</b> Creating efficient, maintainable solutions in Agile environments, with hands-on experience in full-cycle software development, system architecture, and modern web technologies.
+                <b>Specialized in:</b> SSO identity platforms (OIDC/PKCE), GIS-based spatial query systems, async event-driven pipelines, and RESTful API design. IEEE member and Springer/IEEE published researcher.
               </div>
               <div class="about-degree">
                 <b>Degree:</b> BSc in Computer Science and Engineering, United International University, Dhaka (CGPA: 3.90/4.00)
@@ -231,6 +231,7 @@
                   <span class="about-skill-tag">Python</span>
                   <span class="about-skill-tag">Java</span>
                   <span class="about-skill-tag">TypeScript</span>
+                  <span class="about-skill-tag">C#</span>
                   <span class="about-skill-tag">C/C++</span>
                   <span class="about-skill-tag">HTML</span>
                   <span class="about-skill-tag">CSS</span>
@@ -241,13 +242,13 @@
                 <div class="about-skills-tags">
                   <span class="about-skill-tag">Node.js</span>
                   <span class="about-skill-tag">Laravel</span>
+                  <span class="about-skill-tag">FastAPI</span>
                   <span class="about-skill-tag">NestJS</span>
                   <span class="about-skill-tag">CakePHP</span>
+                  <span class="about-skill-tag">Grails</span>
                   <span class="about-skill-tag">React</span>
                   <span class="about-skill-tag">React Native</span>
                   <span class="about-skill-tag">jQuery</span>
-                  <span class="about-skill-tag">ES6</span>
-                  <span class="about-skill-tag">Ajax</span>
                 </div>
               </div>
               <div class="about-skills-group">
@@ -255,17 +256,27 @@
                 <div class="about-skills-tags">
                   <span class="about-skill-tag">MySQL</span>
                   <span class="about-skill-tag">PostgreSQL</span>
+                  <span class="about-skill-tag">MongoDB</span>
+                  <span class="about-skill-tag">DuckDB</span>
+                  <span class="about-skill-tag">MariaDB</span>
                 </div>
               </div>
               <div class="about-skills-group">
-                <div class="about-skills-title">Core Concepts</div>
+                <div class="about-skills-title">Identity & Auth</div>
                 <div class="about-skills-tags">
-                  <span class="about-skill-tag">OOP</span>
-                  <span class="about-skill-tag">Data Structures</span>
-                  <span class="about-skill-tag">Algorithms</span>
-                  <span class="about-skill-tag">RDBMS</span>
-                  <span class="about-skill-tag">Web & App Development</span>
-                  <span class="about-skill-tag">System Architecture</span>
+                  <span class="about-skill-tag">Keycloak</span>
+                  <span class="about-skill-tag">OIDC</span>
+                  <span class="about-skill-tag">PKCE</span>
+                  <span class="about-skill-tag">OAuth2</span>
+                </div>
+              </div>
+              <div class="about-skills-group">
+                <div class="about-skills-title">Async & Messaging</div>
+                <div class="about-skills-tags">
+                  <span class="about-skill-tag">RabbitMQ</span>
+                  <span class="about-skill-tag">WebSockets</span>
+                  <span class="about-skill-tag">Apache Parquet</span>
+                  <span class="about-skill-tag">Event-driven Pipelines</span>
                 </div>
               </div>
             </div>
@@ -325,15 +336,15 @@
               <div class="exp-header-details">
                 <div class="exp-company">BIT MASCOT (PVT.) LTD.</div>
                 <div class="exp-role">Software Engineer</div>
-                <div class="exp-meta">May 2023 – Present &bull; Dhaka, Bangladesh</div>
+                <div class="exp-meta">May 2023 – Dec 2025 &bull; Dhaka, Bangladesh</div>
               </div>
             </div>
             <ul class="exp-bullets">
-              <li>Developed Laravel APIs for managing Australian mining data using Repository-Service pattern, Laravel schedulers, Apache, and MySQL.</li>
-              <li>Built a graduation service platform with a CMS for universities using CakePHP, MySQL, and Ajax, following the MVC pattern.</li>
-              <li>Designed APIs for hospital-doctor interactions, shift scheduling, and eligibility management using Laravel, SendGrid, and socket services.</li>
-              <li>Created APIs for Nintendo Repair and Returns, integrating SendGrid, Autobill SDK, and real-time updates with Laravel schedulers.</li>
-              <li>Developed APIs for the Regional Tech Hub to display network availability for remote Australians, leveraging SendGrid and Postman.</li>
+              <li>Built GIS-based spatial query systems for two Australian mining platforms (Mining Hub, Mining Bull) with real-time geospatial filtering using PostGIS and spatial indexes.</li>
+              <li>Designed and optimised RESTful APIs across MySQL, PostgreSQL, MongoDB, and DuckDB following Repository-Service pattern and MVC architecture.</li>
+              <li>Implemented async data pipelines (RabbitMQ, Laravel Schedulers) and WebSocket layers to decouple bottlenecks in enterprise workflows.</li>
+              <li>Built graduation service platform with CMS for editable certificate templates using CakePHP and asynchronous certificate generation via RabbitMQ.</li>
+              <li>Integrated third-party services including SendGrid for email automation and Autobill SDK for secure payment processing across multiple platforms.</li>
             </ul>
             <div class="exp-tools-row">
               <span class="exp-tool">PHP</span>
@@ -341,7 +352,10 @@
               <span class="exp-tool">Laravel</span>
               <span class="exp-tool">CakePHP</span>
               <span class="exp-tool">MySQL</span>
-              <span class="exp-tool">PostgreSQL</span>
+              <span class="exp-tool">PostgreSQL / GIS</span>
+              <span class="exp-tool">RabbitMQ</span>
+              <span class="exp-tool">WebSockets</span>
+              <span class="exp-tool">DuckDB</span>
             </div>
           </div>
         </div>
@@ -413,6 +427,41 @@
                     <li>Built unified SSO identity platform with custom OIDC flow and token enrichment using Keycloak.</li>
                     <li>Developed centralized user provisioning service with FastAPI and MongoDB for cross-product identity lifecycle management.</li>
                     <li>Contributed to product backends — Exsited and WebCommander (Grails), Umerang (C#).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l4">
+            <div class="project-card card large">
+              <div class="card-image">
+                <img alt="Log Archiver" src="assets/img/projects/mnb2.png" />
+              </div>
+              <div class="card-content">
+                <h5 class="card-title">Log Archiver</h5>
+                <p class="card-description">
+                  Enterprise log archival platform with columnar Parquet storage and a RabbitMQ-decoupled ingestion pipeline for high-throughput analytics.
+                </p>
+              </div>
+              <div class="card-actions">
+                <button class="view-details-btn" onclick="toggleCardReveal(this)">
+                  <i class="mdi-navigation-more-vert"></i> View Details
+                </button>
+              </div>
+              <div class="card-reveal">
+                <div class="card-reveal-header">
+                  <h5 class="card-reveal-title">Log Archiver</h5>
+                  <button class="close-btn" onclick="toggleCardReveal(this)">
+                    <i class="mdi-navigation-close"></i>
+                  </button>
+                </div>
+                <div class="card-reveal-content">
+                  <ul>
+                    <li><b>Tools:</b> FastAPI, DuckDB, Apache Parquet, RabbitMQ</li>
+                    <li>Columnar Parquet storage enables efficient analytics queries over large log volumes.</li>
+                    <li>RabbitMQ-decoupled ingestion sustains throughput under high load without blocking the write path.</li>
+                    <li>DuckDB used for fast in-process analytical queries over archived data.</li>
                   </ul>
                 </div>
               </div>
@@ -523,9 +572,6 @@
                 <button class="view-details-btn" onclick="toggleCardReveal(this)">
                   <i class="mdi-navigation-more-vert"></i> View Details
                 </button>
-                <a href="#" target="_blank" class="external-link-btn" title="View Online">
-                  <i class="fa fa-external-link"></i>
-                </a>
               </div>
               <div class="card-reveal">
                 <div class="card-reveal-header">
@@ -542,12 +588,6 @@
                     <li>Implemented secure authentication and authorization.</li>
                     <li>Built comprehensive repair and return management system.</li>
                     </ul>
-                </div>
-                <div class="card-reveal-footer">
-                  <a href="#" target="_blank" class="btn">
-                    <i class="fa fa-external-link"></i>
-                    Visit Project
-                  </a>
                 </div>
               </div>
             </div>
@@ -703,8 +743,8 @@
                 <button class="view-details-btn" onclick="toggleCardReveal(this)">
                   <i class="mdi-navigation-more-vert"></i> View Details
                 </button>
-                <a href="https://app.mininghub.com/" target="_blank" class="external-link-btn" title="View Online">
-                  <i class="fa fa-external-link"></i>
+                <a href="https://github.com/SiamSarker" target="_blank" class="external-link-btn" title="View on GitHub">
+                  <i class="fa fa-github"></i>
                 </a>
               </div>
               <div class="card-reveal">
@@ -724,9 +764,9 @@
                     </ul>
                 </div>
                 <div class="card-reveal-footer">
-                  <a href="https://app.mininghub.com/" target="_blank" class="btn">
-                    <i class="fa fa-external-link"></i>
-                    Visit Project
+                  <a href="https://github.com/SiamSarker" target="_blank" class="btn">
+                    <i class="fa fa-github"></i>
+                    View on GitHub
                   </a>
                 </div>
               </div>
@@ -1060,25 +1100,20 @@
       <div class="container center-align">
         <div class="resume-container">
           <div class="resume-actions">
-            <a href="/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf"
-              class="resume-view-btn"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fa fa-external-link"></i> View PDF
-            </a>
-            <a href="/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf" download class="resume-download-btn" target="_blank">
+            <a href="assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf"
+               download="Md_Siam_Hossain_Sarker_Resume.pdf"
+               class="resume-download-btn">
               <i class="fa fa-download"></i> Download PDF
             </a>
-            <button onclick="scrollToTop()" class="resume-close-btn">
-              <i class="fa fa-arrow-up"></i> Go to TOP
-            </button>
+            <a href="assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf"
+               target="_blank" rel="noopener"
+               class="resume-view-btn">
+              <i class="fa fa-external-link"></i> Open in New Tab
+            </a>
           </div>
           <div class="resume-viewer">
-            <iframe src="/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf" 
+            <iframe src="assets/resume/resume.html"
                     width="100%" height="800px" frameborder="0">
-              <p>Your browser does not support PDFs. 
-                 <a href="/assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf">Download the PDF</a>.
-              </p>
             </iframe>
           </div>
         </div>
@@ -1086,11 +1121,23 @@
     </section>
   </main>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 <a href="#intro">Siam Hossain</a> — Built with HTML, CSS &amp; JS</span>
+      <div class="footer-links">
+        <a href="https://github.com/siamsarker" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github"></i></a>
+        <a href="https://linkedin.com/in/siam-sarker" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+        <a href="mailto:m.siamhossainsarker@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
   <!-- typed.js -->
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript">
     var typed = new Typed('.typing',{
-      strings: ["PHP Developer", "Laravel Expert", "Node.js Enthusiast", "JavaScript Coder"],
+      strings: ["Backend Engineer", "Identity Systems Builder", "Distributed Systems Dev", "Node.js &amp; Laravel Expert"],
       loop: true,
       typeSpeed: 80,
       backSpeed: 40
@@ -1132,43 +1179,13 @@
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
       const mobileMenu = document.getElementById('mobileMenu');
-      const menuToggle = document.querySelector('.mobile-menu-toggle');
       const navbar = document.querySelector('.top-navbar');
-      
-      if (mobileMenu.classList.contains('active') && 
+
+      if (mobileMenu.classList.contains('active') &&
           !navbar.contains(event.target)) {
         closeMobileMenu();
       }
-    })
-
-  
-
-    function scrollToTop() {
-      // Force smooth scrolling with animation
-      const targetElement = document.getElementById('intro');
-      const startPosition = window.pageYOffset;
-      const targetPosition = targetElement.offsetTop;
-      const distance = targetPosition - startPosition;
-      const duration = 1000; // 1 second
-      let start = null;
-      
-      function animation(currentTime) {
-        if (start === null) start = currentTime;
-        const timeElapsed = currentTime - start;
-        const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      }
-      
-      function easeInOutQuad(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-      
-      requestAnimationFrame(animation);
-    }
+    });
 
     function updateNavigation(currentSection) {
       const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
@@ -1181,17 +1198,15 @@
       });
     }
 
-    // Add active class to navigation links based on scroll position
+    // Navbar scroll shadow + active nav links
     window.addEventListener('scroll', function() {
-      // Don't update navigation if resume is showing
+      // Navbar scroll shadow
+      document.querySelector('.top-navbar').classList.toggle('scrolled', window.scrollY > 20);
+
       const resumeSection = document.getElementById('resume');
-      if (resumeSection && resumeSection.style.display === 'block') {
-        return;
-      }
+      if (resumeSection && resumeSection.style.display === 'block') return;
 
       const sections = document.querySelectorAll('section[id]:not(#resume)');
-      const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
-      
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 150;
@@ -1201,10 +1216,29 @@
         }
       });
 
-      if (current) {
-        updateNavigation(current);
+      if (current) updateNavigation(current);
+    });
+
+    // Dark mode
+    (function() {
+      const KEY = 'portfolio-theme';
+      function applyTheme(dark) {
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        const icon = document.getElementById('darkModeIcon');
+        const mobileLink = document.getElementById('mobileDarkModeLink');
+        if (icon) icon.className = dark ? 'fa fa-sun-o' : 'fa fa-moon-o';
+        if (mobileLink) mobileLink.innerHTML = (dark ? '<i class="fa fa-sun-o"></i>' : '<i class="fa fa-moon-o"></i>') + ' &nbsp;' + (dark ? 'Light Mode' : 'Dark Mode');
       }
-    })
+      function toggleDarkMode() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        localStorage.setItem(KEY, isDark ? 'light' : 'dark');
+        applyTheme(!isDark);
+      }
+      const saved = localStorage.getItem(KEY);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(saved ? saved === 'dark' : prefersDark);
+      window.toggleDarkMode = toggleDarkMode;
+    })();
 
     // Project Card Reveal Function
     function toggleCardReveal(element) {

@@ -1,72 +1,72 @@
-# Personal Portfolio ⚡️ 
-> A clean, beautiful, responsive portfolio template for Software Developers!
+# Siam Hossain — Portfolio
 
-> https://siamsarker.github.io
+> Personal portfolio for **Md Siam Hossain Sarker**, Software Engineer specialising in distributed systems and identity infrastructure.
 
-![GitHub stars](https://img.shields.io/github/stars/siamsarker/siamsarker.github.io) 
-![GitHub forks](https://img.shields.io/github/forks/siamsarker/siamsarker.github.io)
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/siamsarker/siamsarker.github.io/commits/master)
-[![Website shields.io](https://img.shields.io/badge/website-up-yellow)](http://siamsarker.github.io/)
-[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/siam-sarker/)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![Website](https://img.shields.io/badge/website-siamsarker.me-f59e0b)](https://siamsarker.me)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![LinkedIn](https://img.shields.io/badge/connect-LinkedIn-0f172a)](https://www.linkedin.com/in/siam-sarker/)
 
-### Website Preview
-<p align="center"> 
-  <kbd>
-    <a href="https://siamsarker.github.io" target="_blank"><img src="examples/preview.gif">
-  </a>
-  </kbd>
-</p>
+**Live**: [siamsarker.me](https://siamsarker.me)
 
-:star: Star me on GitHub — it helps!
+---
 
-## Features 📋
-⚡️ Fully Responsive\
-⚡️ Valid HTML5 & CSS3\
-⚡️ Typing animation using `Typed.js`\
-⚡️ Easy to modify
+## Design
 
-## Installation & Deployment 📦
-- Clone the repository and modify the content of <b>index.html</b> according to your requirement.
-- Add or remove images from `siamsarker.github.io/assets/img/` directory as per your requirement.
-- I highly recommend to use [Github Pages](https://create-react-app.dev/docs/deployment/#github-pages) to deploy the website the EASIEST WAY.
-- To deploy your website, first you need to create github repository with name `<your-github-username>.github.io`. Please don't give any other name.
-- Push the generated code to the `master` branch of this repository.
-- <b>NOTE:</b> Make sure to set `analyticsId` from your Google Analytics account inside the Google Analytics script tag, if you want to use your own Google Analytics account.
+- Dark navy (`#0f172a`) navigation on a light page body, with a single warm amber (`#f59e0b`) accent
+- Light / dark mode toggle — persisted in `localStorage`, defaults to `prefers-color-scheme`
+- Fully responsive, mobile-first
+- Type system: **Inter** (body) · **Outfit** (headings) · **JetBrains Mono** (tech labels)
+- Hand-rolled CSS using design tokens — no build step, no framework lock-in
 
-## Sections 📚
-✔️ About me\
-✔️ Experience\
-✔️ Projects \
-✔️ Skills \
-✔️ Education\
-✔️ Contact Info\
-✔️ Resume
+## Stack
 
-To view a live example, **[click here](https://siamsarker.github.io/)**
+| Layer | What it uses |
+|---|---|
+| Markup | Single static `index.html` |
+| Styles | Custom CSS variables (`assets/css/style.css`) |
+| JS | Vanilla — dark mode toggle, scroll spy, mobile menu, project card flip |
+| Resume | `assets/resume/resume.html` rendered to PDF via headless Chrome |
+| CDN libs | Materialize 0.95.3 · Font Awesome 4.3 · jQuery 1.11 · Typed.js · html2pdf |
+| Hosting | GitHub Pages with custom domain (`CNAME`) |
 
-## Tools Used 🛠️
-* [<b>GitHub Pages</b>](https://create-react-app.dev/docs/deployment/#github-pages) - To host my static website (HTML, CSS, JS).
-* [<b>Materialize</b>](https://materializecss.com/) - A CSS framework to get Google's Material Design components.
-* [<b>Typed.js</b>](https://mattboldt.com/demos/typed-js/) - JavaScript Library
+## Sections
 
-## Contributing 💡
-#### Step 1
+1. **Hero** — name, tagline, primary / secondary CTAs
+2. **About** — bio plus grouped skill tags (Languages · Frameworks · Databases · Identity · Async)
+3. **Experience** — vertical timeline (WebAlive · Bit Mascot · UIU)
+4. **Projects** — flip-card project cards (Hykmah, Log Archiver, Mining Hub, etc.)
+5. **Skills** — logo grids across five categories
+6. **Education** — BSc CSE @ UIU
+7. **Contact** — phone · email · GitHub · LinkedIn
+8. **Resume** — embedded HTML resume with **Download** and **Open in New Tab** actions
 
-- **Option 1**
-    - 🍴 Fork this repo!
+## Local development
 
-- **Option 2**
-    - 👯 Clone this repo to your local machine.
+No build step.
 
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
-#### Step 2
+Don't open `index.html` directly via `file://` — the resume iframe references an absolute path (`/assets/resume/resume.html`) that only resolves over HTTP.
 
-- **Build your code** 🔨🔨🔨
+## Resume
 
-#### Step 3
+The HTML resume at `assets/resume/resume.html` is the source of truth. After editing it, regenerate the PDF:
 
-- 🔃 Create a new pull request.
+```bash
+bash scripts/build-resume-pdf.sh
+```
 
-## License 📄
-This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+The script spins up a local HTTP server, renders the resume in headless Chrome, and writes `assets/resume/Md_Siam_Hossain_Sarker_Resume.pdf`. The output is true vector PDF — text is selectable, links are clickable.
+
+## Deployment
+
+Push to `master` → GitHub Actions (`.github/workflows/pages-deploy.yml`) deploys to GitHub Pages at [siamsarker.me](https://siamsarker.me) (custom domain via `CNAME`).
+
+Current development branch: `new-design`.
+
+## License
+
+MIT — see [LICENSE](./LICENSE).
