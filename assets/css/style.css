@@ -342,14 +342,6 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
   color: transparent;
 }
-
-/* Modern Social Buttons */
-.social {
-  display: flex;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
 /* Section Titles */
 .page-title {
   font-size: 2rem;
@@ -853,12 +845,7 @@ nav *,
   .project-card .external-link-btn {
     width: 100%;
     justify-content: center;
-  }
-  
-  .social {
-    justify-content: center;
-  }
-}
+  }}
 
 @media (max-width: 480px) {
     .container {
@@ -881,12 +868,7 @@ nav *,
     flex-direction: column;
     gap: 0.75rem;
     padding: 0.75rem 1rem;
-  }
-  
-  .social {
-    gap: 0.75rem;
-  }
-}
+  }}
 
 /* Smooth scrolling */
 html {
@@ -1002,11 +984,6 @@ html {
   transition: box-shadow 0.2s;
   border: 1.5px solid #f3f4f6;
 }
-
-.exp-card + .exp-card {
-  margin-top: 2.5rem;
-}
-
 .exp-card:hover {
   box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.16);
   border-color: #e0e7ff;
