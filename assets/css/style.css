@@ -329,7 +329,7 @@ html[data-theme="dark"] .top-navbar .hamburger-line {
   background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 60%, #0c1a2e 100%);
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 93vh;
   display: flex;
   align-items: center;
 }
