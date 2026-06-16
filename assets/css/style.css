@@ -203,6 +203,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition);
 }
 
+html[data-theme="dark"] .top-navbar .hamburger-line {
+  background: #fff !important;
+}
+
 .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
