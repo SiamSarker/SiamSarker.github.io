@@ -879,7 +879,7 @@ nav *,
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 140px;
+  scroll-padding-top: 80px;
 }
 
 /* Custom scrollbar */
@@ -1247,10 +1247,6 @@ html {
   margin-bottom: 2.5rem;
 }
 
-/* Remove white gap on scroll: adjust scroll-margin-top for all sections */
-.section {
-  scroll-margin-top: 140px;
-}
 
 /* Resume card polish */
 .resume-container {
