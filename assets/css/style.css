@@ -1721,7 +1721,7 @@ html[data-theme="dark"] a.hoverline:hover { border-bottom-color: #818cf8; color:
 /* ── Hero redesign ── */
 .hero-content {
   max-width: 680px;
-  padding: 3rem 0 2rem;
+  padding: 0 0 6rem;
 }
 
 .hero-eyebrow {

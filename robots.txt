@@ -1,4 +1,4 @@
-# https://siamsarker.me/robots.txt
+# https://siamsarker.github.io/robots.txt
 
 # Group 1
 User-agent: Googlebot
@@ -9,4 +9,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://siamsarker.me/sitemap.xml
+Sitemap: https://siamsarker.github.io/sitemap.xml

@@ -2,11 +2,11 @@
 
 > Personal portfolio for **Md Siam Hossain Sarker**, Software Engineer specialising in distributed systems and identity infrastructure.
 
-[![Website](https://img.shields.io/badge/website-siamsarker.me-f59e0b)](https://siamsarker.me)
+[![Website](https://img.shields.io/badge/website-siamsarker.github.io-f59e0b)](https://siamsarker.github.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![LinkedIn](https://img.shields.io/badge/connect-LinkedIn-0f172a)](https://www.linkedin.com/in/siam-sarker/)
 
-**Live**: [siamsarker.me](https://siamsarker.me)
+**Live**: [siamsarker.github.io](https://siamsarker.github.io)
 
 ---
 
@@ -63,7 +63,7 @@ The script spins up a local HTTP server, renders the resume in headless Chrome, 
 
 ## Deployment
 
-Push to `master` → GitHub Actions (`.github/workflows/pages-deploy.yml`) deploys to GitHub Pages at [siamsarker.me](https://siamsarker.me) (custom domain via `CNAME`).
+Push to `master` → GitHub Actions (`.github/workflows/pages-deploy.yml`) deploys to GitHub Pages at [siamsarker.github.io](https://siamsarker.github.io).
 
 Current development branch: `new-design`.
 
