@@ -1,6 +1,6 @@
 # Siam Hossain — Portfolio
 
-> Personal portfolio for **Md Siam Hossain Sarker**, Software Engineer specialising in distributed systems and identity infrastructure.
+> Personal portfolio for **Md Siam Hossain Sarker**, Software Engineer specialising in backend architecture, scalable APIs, and asynchronous pipelines.
 
 [![Website](https://img.shields.io/badge/website-siamsarker.github.io-f59e0b)](https://siamsarker.github.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
